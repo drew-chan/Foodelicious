@@ -382,9 +382,9 @@
                 '<input id="updateBtn" class="btn btn-outline-primary" type="button" value="更新" data-id='+dataSource[i].productId+'>'+
                 '</form>'+
                 '</td>'
-            txt += '<td class="mdata">'+
-                '<form method="" action="">'+
-                '<input id="delBtn" class="btn btn-outline-danger" type="button" value="刪除" data-id='+dataSource[i].productId+'>'+
+            txt += '<td class="align-middle">'+
+                '<form method="" >'+
+                '<input id="delBtn" class="btn btn-outline-primary" type="button" value="刪除" data-id='+dataSource[i].productId+'>'+
                 '</form>'+
                 '</td></tr>'
         }

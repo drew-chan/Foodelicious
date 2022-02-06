@@ -180,7 +180,8 @@
 .sidebar .profile-details .profile-content{
   display: flex;
   align-items: center;
-  margin-left:34%;
+  margin-left:45%;
+ 
 }
 .sidebar .profile-details .profile_name,
 .sidebar .profile-details .job{
@@ -327,6 +328,13 @@ table{
     font-weight:light;
 }
 
+.smallFont2{
+    color: black;
+    font-size:20px;
+    margin:9px;
+    font-weight:light;
+}
+
 h1.tableName{
 	font-size:30px;
 	margin: 8px;
@@ -379,9 +387,102 @@ h1.tableName{
 	
 }
 
-#logout{
+#logoutButton{
+	color:white;
+/* 	cursor: url;  放這裡居然沒用? */
 	
-	cursor: pointer;
+	
 }
 
+/* product add 2 */
+
+h1.tableNameProduct{
+	margin-top:10px;
+	margin-left:10%;
+	font-size:30px;
+	font-weight:bold;
+}
+
+.smallFontProduct{
+	color: #D3B884;
+    font-size:25px;
+    margin:5px;
+    font-weight:light;
+	
+}
+
+.main{
+    margin-left:10%;
+    margin-top: 40px;
+    width: 650px;
+    min-width: 650px;
+
+}
+
+form.addProduct{
+    border-radius: 50px; 
+    box-shadow: 2px 5px 5px 0px gray;
+	margin-top:5px;
+}
+
+.responseTable{
+	box-shadow: 2px 5px 5px 0px gray;
+	border-radius: 50px; 
+	margin:10px;
+	border:1px black solid;
+	width:fit-content;
+}
+
+
+.textSet{
+    vertical-align: middle;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.textArea{
+    margin: 10px;
+    text-align: left;
+}
+
+.content{
+    padding-top: 10px;
+    text-align:left;
+
+}
+
+.textArea{
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.buttonArea{
+    margin-top: 50px;
+}
+
+#resetProduct{
+    box-shadow: 2px 5px 5px 0px gray;
+}
+
+#submitAddProduct{
+    box-shadow: 2px 5px 5px 0px gray;
+}
+
+/* 分析報表頁面 */
+
+#report1{
+    float: left;
+    margin-left: 50px;
+    box-shadow: 0 10px 50px 0px gray;
+    border-radius: 10px;
+}
+
+#report2{
+    margin-left: 120px;
+    
+    display: inline-block;
+    box-shadow: 0 10px 50px 1px gray;
+    border-radius: 10px;
+}
 

@@ -59,7 +59,7 @@
 				<ul class="sub-menu">
 					<li><a class="link_name" href="/companyOrder">訂單管理</a></li>
 					<li><a href="/companyOrder">所有訂單</a></li>
-					<li><a href="#">修改訂單</a></li>
+					
 				</ul>
 			</li>
 			<li>
@@ -70,8 +70,8 @@
 				</div>
 				<ul class="sub-menu">
 					<li><a class="link_name" href="#">分析報表</a></li>
-					<li><a href="#">暢銷商品</a></li>
-					<li><a href="#">銷售總額</a></li>
+					<li><a href="/companyBestSeller">暢銷商品</a></li>
+					
 				</ul>
 			</li>
 			<li><a href="#" class="problem"> <i class='bx bx-error-alt'></i>
@@ -81,18 +81,18 @@
 					<li><a class="problem" href="#">問題回報</a></li>
 				</ul></li>
 
-			<li><a href="#"> <i class='bx bxs-inbox'></i> <span
-					class="link_name">訊息</span>
-			</a>
-				<ul class="sub-menu blank">
-					<li><a class="link_name" href="#">訊息</a></li>
-				</ul></li>
-			<li>
+<!-- 			<li><a href="#"> <i class='bx bxs-inbox'></i> <span -->
+<!-- 					class="link_name">訊息</span> -->
+<!-- 			</a> -->
+<!-- 				<ul class="sub-menu blank"> -->
+<!-- 					<li><a class="link_name" href="#">訊息</a></li> -->
+<!-- 				</ul></li> -->
+<!-- 			<li> -->
 				<div class="profile-details">
 
 					<div class="profile-content">
 
-						<i class='bx bxs-log-out' id="logout"
+						<i style="cursor:pointer" class='bx bxs-log-out' id="logoutButton"
 							onclick="logout('${account}')"></i>
 					</div>
 
@@ -161,62 +161,20 @@
 					<input type="button" id="submitComplete"
 						class="btn btn-outline-danger" value="submit">
 				</form>
-
+			<button type="button" onclick="autofill()">一鍵輸入</button>
 			</div>
 
 		</div>
 	</div>
+	
+
+
 	<script>
-	var today = new Date();
-	var month = today.getMonth()+1;
-	var monthString;
-	switch (month){
-		case 1:
-			monthString = "Jan";
-			break;
-		case 2:
-			monthString = "Feb";
-			break;
-		case 3:
-			monthString = "Mar";
-			break;
-		case 4:
-			monthString = "Apr";
-			break;
-		case 5:
-			monthString = "May";
-			break;
-		case 6:
-			monthString = "Jun";
-			break;
-		case 7:
-			monthString = "July";
-			break;
-		case 8:
-			monthString = "Aug";
-			break;
-		case 9:
-			monthString = "Sep";
-			break;
-		case 10:
-			monthString = "Oct";
-			break;
-		case 11:
-			monthString = "Nov";
-			break;
-		case 12:
-			monthString = "Dec";
-			break;
+	
+	function autofill(){
+		$('#problem-content').val("商品下架有問題，需要緊急處理因為商品庫存不夠無法應付需求。")
+		$('#problemsCat').val("0")
 	}
-	var date = monthString+" "+today.getDate()+", "+today.getFullYear();
-	
-	$("#date").text(date);
-	
-	</script>
-	
-
-
-	<script>
 //     =============傳送問題回報資料=============
     	<!-- 確認問題回報單沒有空白 -->
     $("#submitComplete").on("click",function(){

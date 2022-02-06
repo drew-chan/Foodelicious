@@ -16,6 +16,7 @@
     </select>
     <input class="keyWord keyWord1 searchBox" type="text" name="accKeyWord" placeholder="請輸入關鍵字...">
     <input id="searchAcc" class="keyWord btn btn-outline-secondary searchBox2 " type="button" value="Search" />
+    <span id="total" style="margin-left:30px"> </span>
 </div>
 
 	<ul id="selectPage" class="nav nav-tabs">
@@ -56,7 +57,7 @@
 		<ul id="page" class="pagination justify-content-center"></ul>
 	</nav>
 
-	<span id="total"> </span>
+	
 
 
 
@@ -72,8 +73,8 @@
 				$.ajax({
 					url : "/companyProducts/delete/" + deleteProductId,
 					type : "DELETE",
-					success : function() {
-						alert("刪除成功");
+					success : function(msg) {
+						alert(msg);
 						window.location.href = "/companyProduct";
 					},
 					error : function() {
@@ -382,8 +383,9 @@
     //=============顯示功能=============
     function showData(startItem,endItem,dataSource){
     	//alert(dataSource[0].productInsertDate);
+    	//alert(endItem);
         let txt = "<tr>";
-        for (let i = startItem; i < endItem; i++) {
+        for (let i = (endItem-1); i >= startItem; i--) {
             txt += "<td class='align-middle'>"+ dataSource[i].productId+"</td>"
             let cate = dataSource[i].productCategories;
             let type = "";
@@ -424,7 +426,7 @@
                 '</td></tr>'
         }
         $("#comProducts").html(txt);
-		let sum = '<h1>共' + productLen + '個商品</h1>';
+		let sum = '<strong>共' + productLen + '個商品</strong>';
 		$("#total").html(sum);
        
     }

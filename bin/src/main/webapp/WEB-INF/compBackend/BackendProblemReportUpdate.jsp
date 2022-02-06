@@ -8,7 +8,7 @@
 <body>
 	<div>
 		<h1 class="tableName titleName2">
-			商品列表 <br> <span class="littleName">Product List</span>
+			問題回報 <br> <span class="littleName">Problem Report</span>
 		</h1>
 
 		<section class="content">
@@ -65,6 +65,7 @@
 				</table>
 			</div>
 		</section>
+		
 	</div>
 	<script>
 		//=============抓取另一頁傳來的資料=============
@@ -158,20 +159,6 @@
 			})
 		})
 	</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
